@@ -9,16 +9,12 @@ import com.sun.btrace.annotations.OnMethod;
 
 @BTrace
 public class MethodStackTrace {
-        private static int printCount = 0;
-         @OnMethod(clazz = "com.taobao.trade.timeout.notify.processor.backward.RefundCloseProcessor", method = "process")
+        @OnMethod(clazz = "com.taobao.trade.timeout.notify.processor.backward.RefundCloseProcessor", method = "process")
         public static void func() {
-            if(printCount++ < 10){
-
-                        println("=======stack======");
-                        jstack();
-                        println("########end#########");
-                }
-            else 
-                exit(0);
+            
+                println("=======stack======");
+                jstack();
+                println("########end#########");
+        
         }
 }
