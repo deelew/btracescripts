@@ -6,6 +6,7 @@ import static com.sun.btrace.BTraceUtils.*;
 
 @BTrace
 public class MethodStackTrace {
+<<<<<<< HEAD
 
     //    @OnMethod(clazz = "org.springframework.beans.factory.support.AbstractBeanFactory", method = "addBeanPostProcessor")
 //    public static void func(@ProbeMethodName String pmn, org.springframework.beans.factory.config.BeanPostProcessor processor) {
@@ -64,4 +65,14 @@ public class MethodStackTrace {
         print("=");
         println(r);
     }
+=======
+        @OnMethod(clazz = "com.taobao.trade.timeout.notify.processor.backward.RefundCloseProcessor", method = "process")
+        public static void func() {
+            
+                println("=======stack======");
+                jstack();
+                println("########end#########");
+        
+        }
+>>>>>>> e4a6a3b03f0bd55b0f6734231b13300f057f0c8f
 }
