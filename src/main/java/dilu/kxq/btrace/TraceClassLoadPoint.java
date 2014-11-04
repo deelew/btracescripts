@@ -20,7 +20,7 @@ public class TraceClassLoadPoint {
 	@OnMethod(clazz = "java.lang.ClassLoader", method = "loadClass")
 	public static void func(String className) {
 
-		if (className != null && startsWith(className, "com.taobao.forest")) {
+		if (className != null && startsWith(className, "xxxx")) {
 			println("=======stack======");
 			jstack();
 			println("########end#########");
